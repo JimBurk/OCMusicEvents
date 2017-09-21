@@ -23,8 +23,10 @@ public class EventsListActivity extends ListActivity {
         String title = MusicEvent.titles[position];
         String details = MusicEvent.details[position];
 
-        Intent detailsIntent = new Intent(this, EventsListActivity.class);
+        Intent detailsIntent = new Intent(this, EventsDetailActivity.class);
         detailsIntent.putExtra("title", title);
         detailsIntent.putExtra("details", details);
+
+        startActivity(detailsIntent);
     }
 }
